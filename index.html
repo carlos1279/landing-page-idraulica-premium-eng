@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       MODIFICA QUI: Titolo della pagina e meta description SEO
+       ============================================================ -->
+  <title>PlumberPro – Professional Plumber in Milan | Premium Design</title>
+  <meta name="description" content="Emergency plumbing service in Milan. Leaks, drain cleaning, boilers, air conditioning. Free and transparent quotes." />
+
+  <!-- ============================================================
+       SECURITY HEADERS
+       ============================================================ -->
+  <!-- Content Security Policy: Protegge da XSS e injection attacks -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  
+  <!-- Protegge da Clickjacking -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  
+  <!-- Referrer Policy: Controlla quali informazioni vengono inviate -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  
+  <!-- Permissions Policy: Limita accesso a browser features -->
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts: Sora + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script>
+    /* ============================================================
+       Tailwind Config – Palette colori personalizzata PREMIUM
+       ============================================================ */
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy:    '#0F172A',   /* Deep Navy */
+              ocean:   '#0369A1',   /* Deep Ocean Blue */
+              cyan:    '#00D9FF',   /* Electric Cyan */
+              light:   '#06B6D4',   /* Sky Cyan */
+              orange:  '#FF6B35',   /* Vibrant Orange */
+              accent:  '#00F0FF',   /* Neon Cyan */
+              dark:    '#020617',   /* Almost Black */
+              gray:    '#F0F9FF',   /* Sky Gray */
+              slate:   '#1E293B',   /* Slate */
+            }
+          },
+          backgroundImage: {
+            'liquid-wave': 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 1200 120\' preserveAspectRatio=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0,50 Q300,0 600,50 T1200,50 L1200,120 L0,120 Z\' fill=\'%23F0F9FF\' opacity=\'0.3\'/%3E%3C/svg%3E")',
+          },
+          animation: {
+            'fade-in-up':     'fadeInUp 0.8s ease-out both',
+            'fade-in':        'fadeIn 0.7s ease-out both',
+            'pulse-glow':     'pulseGlow 2.5s cubic-bezier(0.4,0,0.6,1) infinite',
+            'bounce-slow':    'bounce 2.5s infinite',
+            'float':          'float 4s ease-in-out infinite',
+            'shimmer':        'shimmer 3s ease-in-out infinite',
+            'wave':           'wave 2s ease-in-out infinite',
+            'liquid-flow':    'liquidFlow 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%':   { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%':   { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            pulseGlow: {
+              '0%, 100%': { boxShadow: '0 0 0 0 rgba(0, 217, 255, 0.7)' },
+              '50%':      { boxShadow: '0 0 0 20px rgba(0, 217, 255, 0)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%':      { transform: 'translateY(-25px)' },
+            },
+            shimmer: {
+              '0%':   { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' },
+            },
+            wave: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%':      { transform: 'translateY(-10px)' },
+            },
+            liquidFlow: {
+              '0%':   { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' },
+            },
+          },
+          boxShadow: {
+            'glass':    '0 8px 32px rgba(0, 217, 255, 0.1)',
+            'glass-lg': '0 8px 32px rgba(0, 217, 255, 0.2)',
+            'glow':     '0 0 20px rgba(0, 217, 255, 0.3)',
+            'glow-lg':  '0 0 40px rgba(0, 217, 255, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ============================================================
+       Stili globali e micro-animazioni PREMIUM
+       ============================================================ */
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Sora', sans-serif;
+      background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+      color: #0F172A;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; font-weight: 700; }
+
+    /* Navbar scroll shadow */
+    #navbar.scrolled {
+      box-shadow: 0 8px 32px rgba(0, 217, 255, 0.15);
+      background: rgba(15, 23, 42, 0.95) !important;
+      backdrop-filter: blur(20px);
+    }
+
+    /* Animazione ritardata */
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    .delay-500 { animation-delay: 0.5s; }
+    .delay-600 { animation-delay: 0.6s; }
+
+    /* Hover card con lift e glow */
+    .card-lift {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+    .card-lift:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 60px rgba(0, 217, 255, 0.25);
+    }
+
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+    }
+
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 217, 255, 0.15);
+    }
+
+    /* Gradiente testo */
+    .text-gradient {
+      background: linear-gradient(90deg, #00D9FF 0%, #06B6D4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Linea decorativa titoli */
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, #00D9FF, #06B6D4);
+      border-radius: 2px;
+      margin: 20px auto 0;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+    }
+
+    /* Pulsante WhatsApp flottante */
+    #whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      animation: pulse-glow 2.5s infinite;
+    }
+
+    /* Input focus */
+    .form-input:focus {
+      outline: none;
+      border-color: #00D9FF;
+      box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.15);
+      background: rgba(0, 217, 255, 0.05);
+    }
+
+    /* Stelle recensioni */
+    .star-filled { color: #FF6B35; }
+
+    /* Ribbon */
+    .ribbon {
+      position: absolute;
+      top: 16px;
+      right: -10px;
+      background: linear-gradient(135deg, #00D9FF, #06B6D4);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 4px 16px 4px 12px;
+      border-radius: 2px 0 0 2px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+    }
+    .ribbon::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 0;
+      border-width: 12px 10px 12px 0;
+      border-style: solid;
+      border-color: transparent #06B6D4 transparent transparent;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Numero statistiche */
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #00D9FF 0%, #FF6B35 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 217, 255, 0.15);
+      border: 1px solid rgba(0, 217, 255, 0.3);
+      color: #00D9FF;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Service card icon */
+    .service-icon-wrap {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .card-lift:hover .service-icon-wrap {
+      transform: scale(1.2) rotate(-8deg);
+      filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.5));
+    }
+
+    /* Rain container */
+    #rain-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: #020617;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+       MODIFICA: Sostituisci +39XXXXXXXXXX con il tuo numero WhatsApp
+       ============================================================ -->
+  <a id="whatsapp-float"
+     href="https://wa.me/39XXXXXXXXXX?text=Ciao!%20Ho%20un'emergenza%20plumbing."
+     target="_blank"
+     rel="noopener"
+     aria-label="Contattaci su WhatsApp"
+     class="flex items-center justify-center w-16 h-16 rounded-full shadow-glow"
+     style="background: linear-gradient(135deg, #25D366, #128C7E);">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- ============================================================
+       HEADER / NAVBAR (Sticky)
+       ============================================================ -->
+  <header id="navbar"
+          class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4"
+          style="background: transparent;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+
+        <!-- LOGO -->
+        <!-- MODIFICA: Cambia "PlumberPro" con il nome della tua azienda -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <div class="flex items-center justify-center w-12 h-12 rounded-2xl glass-dark group-hover:scale-110 transition-transform duration-500">
+            <i class="fas fa-water text-brand-cyan text-2xl"></i>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-white font-black text-2xl tracking-tight">Plumbing<span class="text-brand-cyan">Pro</span></span>
+            <span class="text-brand-cyan/60 text-[10px] font-bold uppercase tracking-[0.3em]">Premium Service</span>
+          </div>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <nav class="hidden md:flex items-center space-x-10">
+          <a href="#home" class="text-white/80 hover:text-brand-cyan font-semibold text-sm transition-all tracking-wide">Home</a>
+          <a href="#perche-noi" class="text-white/80 hover:text-brand-cyan font-semibold text-sm transition-all tracking-wide">Perché Noi</a>
+          <a href="#servizi" class="text-white/80 hover:text-brand-cyan font-semibold text-sm transition-all tracking-wide">Servizi</a>
+          <a href="#recensioni" class="text-white/80 hover:text-brand-cyan font-semibold text-sm transition-all tracking-wide">Recensioni</a>
+          <a href="#contatti" class="text-white/80 hover:text-brand-cyan font-semibold text-sm transition-all tracking-wide">Contact</a>
+        </nav>
+
+        <!-- CTA BUTTON -->
+        <!-- MODIFICA: Sostituisci +39XXXXXXXXXX con il tuo numero di telefono -->
+        <div class="hidden md:block">
+          <a href="tel:+39XXXXXXXXXX"
+             class="inline-flex items-center gap-3 bg-brand-cyan hover:bg-brand-accent text-brand-navy px-8 py-3.5 rounded-2xl font-black text-sm transition-all shadow-glow hover:shadow-glow-lg hover:-translate-y-1">
+            <i class="fas fa-phone-alt animate-pulse"></i>
+            Call Now
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white focus:outline-none p-2 glass rounded-xl">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-navy/95 backdrop-blur-2xl border-t border-white/10">
+      <div class="px-4 pt-4 pb-8 space-y-2">
+        <a href="#home" class="block px-4 py-4 text-white font-bold border-b border-white/5">Home</a>
+        <a href="#perche-noi" class="block px-4 py-4 text-white font-bold border-b border-white/5">Perché Noi</a>
+        <a href="#servizi" class="block px-4 py-4 text-white font-bold border-b border-white/5">Servizi</a>
+        <a href="#recensioni" class="block px-4 py-4 text-white font-bold border-b border-white/5">Recensioni</a>
+        <a href="#contatti" class="block px-4 py-4 text-white font-bold">Contact</a>
+        <div class="mt-6 px-4">
+          <a href="tel:+39XXXXXXXXXX" class="flex items-center justify-center gap-3 bg-brand-cyan text-brand-navy w-full py-5 rounded-2xl font-black shadow-glow">
+            <i class="fas fa-phone-alt"></i>
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTION WITH RAIN EFFECT
+       ============================================================ -->
+  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- Rain Effect Container -->
+    <div id="rain-container"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 hero-content">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="text-center lg:text-left animate-fade-in-up">
+          <div class="badge mb-8">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-cyan opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-cyan"></span>
+            </span>
+            Pronto Intervento 24/7 attivo
+          </div>
+          <!-- MODIFICA: Cambia "[TUA CITTÀ]" con la tua città -->
+          <h1 class="text-5xl md:text-8xl font-black text-white leading-[1.05] mb-8 tracking-tight">
+            Plumbing <br/>
+            <span class="text-brand-cyan">D'Eccellenza</span> <br/>
+            a <span class="text-brand-orange">Milan</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-white/70 mb-12 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+            Risolviamo ogni guasto con precisione chirurgica e tecnologie d'avanguardia. La tua sicurezza plumbing è la nostra missione.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
+            <a href="#contatti" class="w-full sm:w-auto bg-brand-cyan hover:bg-brand-accent text-brand-navy px-12 py-5 rounded-2xl font-black text-lg transition-all shadow-glow hover:shadow-glow-lg flex items-center justify-center gap-3 group">
+              Richiedi Preventivo
+              <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+            </a>
+            <a href="https://wa.me/39XXXXXXXXXX" class="w-full sm:w-auto glass-dark hover:bg-white/10 text-white border border-white/20 px-12 py-5 rounded-2xl font-black text-lg transition-all flex items-center justify-center gap-3">
+              <i class="fab fa-whatsapp text-brand-cyan text-2xl"></i>
+              Scrivici Ora
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div class="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto lg:mx-0">
+            <div class="text-center lg:text-left">
+              <div class="stat-number">30'</div>
+              <div class="text-white/40 text-[10px] uppercase tracking-[0.3em] font-black mt-2">Arrivo</div>
+            </div>
+            <div class="text-center lg:text-left border-x border-white/10">
+              <div class="stat-number">15+</div>
+              <div class="text-white/40 text-[10px] uppercase tracking-[0.3em] font-black mt-2">Anni Exp</div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div class="stat-number">5k+</div>
+              <div class="text-white/40 text-[10px] uppercase tracking-[0.3em] font-black mt-2">Interventi</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Element -->
+        <div class="hidden lg:block relative animate-fade-in delay-300">
+          <div class="relative z-10 rounded-[40px] overflow-hidden shadow-2xl border border-white/10 group">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070"
+                 alt="Plumber Professionista"
+                 class="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent opacity-60"></div>
+            <!-- Floating Badge -->
+            <div class="absolute bottom-8 left-8 right-8 glass p-6 rounded-3xl border border-white/20 animate-float">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 bg-brand-cyan rounded-2xl flex items-center justify-center shrink-0">
+                  <i class="fas fa-shield-alt text-brand-navy text-2xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-brand-navy font-black text-lg">Garanzia 10 Anni</h4>
+                  <p class="text-brand-navy/60 text-sm font-medium">Su tutti i nuovi impianti installati</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Decorative Elements -->
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-cyan/20 rounded-full blur-3xl animate-pulse"></div>
+          <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-orange/20 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce-slow">
+      <a href="#perche-noi" class="text-white/30 hover:text-brand-cyan transition-colors">
+        <i class="fas fa-chevron-down text-3xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PERCHÉ SCEGLIERE NOI
+       ============================================================ -->
+  <section id="perche-noi" class="py-32 bg-brand-gray relative overflow-hidden">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 left-0 w-full h-32 bg-liquid-wave rotate-180"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-24 reveal">
+        <h2 class="text-4xl md:text-6xl font-black text-brand-navy mb-6 section-title">Standard di Quality Superiore</h2>
+        <p class="text-brand-ocean font-bold uppercase tracking-[0.3em] text-sm">Perché affidarsi a PlumberPro</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Card 1 -->
+        <div class="glass p-12 rounded-[48px] card-lift reveal delay-100">
+          <div class="service-icon-wrap w-24 h-24 bg-brand-cyan/10 rounded-3xl flex items-center justify-center mb-10">
+            <i class="fas fa-bolt-lightning text-brand-cyan text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-6">Intervento Flash</h3>
+          <p class="text-brand-slate/70 leading-relaxed text-lg">
+            Siamo sul posto entro 30 minuti dalla chiamata. Gestiamo le emergenze con la massima priorità, 24 ore su 24.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass p-12 rounded-[48px] card-lift reveal delay-200">
+          <div class="service-icon-wrap w-24 h-24 bg-brand-orange/10 rounded-3xl flex items-center justify-center mb-10">
+            <i class="fas fa-file-invoice-dollar text-brand-orange text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-6">Prezzi Certificati</h3>
+          <p class="text-brand-slate/70 leading-relaxed text-lg">
+            Nessuna sorpresa. Forniamo preventivi dettagliati e trasparenti prima di iniziare qualsiasi lavoro.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass p-12 rounded-[48px] card-lift reveal delay-300">
+          <div class="service-icon-wrap w-24 h-24 bg-brand-ocean/10 rounded-3xl flex items-center justify-center mb-10">
+            <i class="fas fa-user-check text-brand-ocean text-5xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-6">Tecnici Master</h3>
+          <p class="text-brand-slate/70 leading-relaxed text-lg">
+            Solo personale altamente qualificato, certificato e costantemente aggiornato sulle ultime normative.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       I NOSTRI SERVIZI (Griglia)
+       ============================================================ -->
+  <section id="servizi" class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-24 reveal">
+        <h2 class="text-4xl md:text-6xl font-black text-brand-navy mb-6 section-title">Soluzioni Idrauliche Complete</h2>
+        <p class="text-brand-cyan font-bold uppercase tracking-[0.3em] text-sm">Servizi professionali su misura</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Servizio 1 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-100">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-droplet text-brand-cyan text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Ricerca Perdite</h3>
+          <p class="text-brand-slate/60 mb-8">Rilevamento non invasivo di perdite d'acqua con termografia e geofonia.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+          <div class="ribbon">H24</div>
+        </div>
+
+        <!-- Servizio 2 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-200">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-faucet text-brand-ocean text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Impianti Idrici</h3>
+          <p class="text-brand-slate/60 mb-8">Progettazione e installazione di impianti idraulici civili e industriali certificati.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Servizio 3 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-300">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-fire-burner text-brand-orange text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Caldaie e Clima</h3>
+          <p class="text-brand-slate/60 mb-8">Installazione, manutenzione e bollino blu per caldaie e condizionatori.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+          <div class="ribbon">Eco</div>
+        </div>
+
+        <!-- Servizio 4 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-100">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-pipe-valve text-brand-navy text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Spurghi e Scarichi</h3>
+          <p class="text-brand-slate/60 mb-8">Disostruzione scarichi, pulizia fosse biologiche e videoispezioni fognarie.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Servizio 5 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-200">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-bath text-brand-light text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Arredo Bagno</h3>
+          <p class="text-brand-slate/60 mb-8">Ristrutturazione completa bagno e sostituzione sanitari e rubinetteria.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+
+        <!-- Servizio 6 -->
+        <div class="group relative bg-brand-gray p-10 rounded-[48px] card-lift reveal delay-300">
+          <div class="service-icon-wrap w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+            <i class="fas fa-screwdriver-wrench text-brand-slate text-3xl"></i>
+          </div>
+          <h3 class="text-2xl font-black mb-4">Manutenzione</h3>
+          <p class="text-brand-slate/60 mb-8">Piani di manutenzione programmata per condomini e attività commerciali.</p>
+          <a href="#contatti" class="text-brand-cyan font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+            Dettagli <i class="fas fa-chevron-right text-xs"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BANNER URGENZA
+       ============================================================ -->
+  <section class="py-20 bg-brand-navy relative overflow-hidden">
+    <div class="absolute inset-0 bg-liquid-wave opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-4">Hai un'emergenza plumbing?</h2>
+          <p class="text-brand-cyan font-bold text-xl">Non aspettare che il danno peggiori. Chiamaci ora!</p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a href="tel:+39XXXXXXXXXX" class="bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-2xl font-black text-xl shadow-lg hover:scale-105 transition-all flex items-center gap-4">
+            <i class="fas fa-phone-alt animate-bounce"></i>
+            +39 XXX XXX XXXX
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       RECENSIONI (Social Proof)
+       ============================================================ -->
+  <section id="recensioni" class="py-32 bg-brand-gray">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-24 reveal">
+        <h2 class="text-4xl md:text-6xl font-black text-brand-navy mb-6 section-title">La Voce dei Nostri Clienti</h2>
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="Google" class="w-6 h-6" />
+          <span class="font-black text-brand-navy">4.9/5 Rating Eccellente</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Recensione 1 -->
+        <div class="glass p-10 rounded-[48px] reveal delay-100">
+          <div class="flex items-center gap-5 mb-8">
+            <div class="w-14 h-14 bg-brand-cyan rounded-2xl flex items-center justify-center text-brand-navy font-black text-xl">GA</div>
+            <div>
+              <h4 class="font-black text-brand-navy">Giuseppe Alessi</h4>
+              <div class="flex text-xs star-filled">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-brand-slate/70 italic leading-relaxed text-lg">
+            "Domenica sera, tubo rotto in cucina. Sono arrivati in 20 minuti e hanno risolto tutto in un'ora. Professionali e onesti nel prezzo. Salvato nei contatti!"
+          </p>
+        </div>
+
+        <!-- Recensione 2 -->
+        <div class="glass p-10 rounded-[48px] reveal delay-200">
+          <div class="flex items-center gap-5 mb-8">
+            <div class="w-14 h-14 bg-brand-orange rounded-2xl flex items-center justify-center text-white font-black text-xl">SR</div>
+            <div>
+              <h4 class="font-black text-brand-navy">Silvia Riva</h4>
+              <div class="flex text-xs star-filled">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-brand-slate/70 italic leading-relaxed text-lg">
+            "Ristrutturazione completa del bagno. Hanno curato ogni dettaglio, dalla scelta dei materiali all'installazione. Risultato oltre le aspettative."
+          </p>
+        </div>
+
+        <!-- Recensione 3 -->
+        <div class="glass p-10 rounded-[48px] reveal delay-300">
+          <div class="flex items-center gap-5 mb-8">
+            <div class="w-14 h-14 bg-brand-ocean rounded-2xl flex items-center justify-center text-white font-black text-xl">MT</div>
+            <div>
+              <h4 class="font-black text-brand-navy">Marco Tosi</h4>
+              <div class="flex text-xs star-filled">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-brand-slate/70 italic leading-relaxed text-lg">
+            "Sostituzione caldaia con modello a condensazione. Mi hanno aiutato anche con le pratiche per la detrazione fiscale. Tecnici preparatissimi."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT US (Contact)
+       ============================================================ -->
+  <section id="contatti" class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-24 items-center">
+        
+        <!-- Info Contact -->
+        <div class="reveal">
+          <h2 class="text-4xl md:text-6xl font-black text-brand-navy mb-10">Mettiamoci in Contatto</h2>
+          <p class="text-brand-slate/60 text-xl mb-12 leading-relaxed">
+            Siamo pronti ad aiutarti. Compila il modulo per un preventivo gratuito o chiamaci per un intervento immediato.
+          </p>
+
+          <div class="space-y-10">
+            <div class="flex items-start gap-8">
+              <div class="w-16 h-16 bg-brand-cyan/10 rounded-2xl flex items-center justify-center shrink-0">
+                <i class="fas fa-location-dot text-brand-cyan text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-black text-xl text-brand-navy mb-2">Sede Operativa</h4>
+                <!-- MODIFICA: Inserisci il tuo indirizzo -->
+                <p class="text-brand-slate/50 text-lg">Via Dante 45, 20121 Milan (MI)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-8">
+              <div class="w-16 h-16 bg-brand-orange/10 rounded-2xl flex items-center justify-center shrink-0">
+                <i class="fas fa-phone-volume text-brand-orange text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-black text-xl text-brand-navy mb-2">Phone Diretto</h4>
+                <!-- MODIFICA: Inserisci il tuo numero -->
+                <p class="text-brand-slate/50 text-lg">+39 XXX XXX XXXX</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-8">
+              <div class="w-16 h-16 bg-brand-ocean/10 rounded-2xl flex items-center justify-center shrink-0">
+                <i class="fas fa-envelope-open-text text-brand-ocean text-2xl"></i>
+              </div>
+              <div>
+                <h4 class="font-black text-xl text-brand-navy mb-2">Email Supporto</h4>
+                <!-- MODIFICA: Inserisci la tua email -->
+                <p class="text-brand-slate/50 text-lg">info@plumbingpro-milano.it</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-16 p-8 glass rounded-[40px] border-brand-cyan/20">
+            <h4 class="font-black text-brand-navy mb-4">Orari di Reperibilità</h4>
+            <div class="flex justify-between items-center">
+              <span class="text-brand-slate/60 font-bold">Lunedì - Domenica</span>
+              <span class="bg-brand-cyan text-brand-navy px-4 py-1 rounded-full font-black text-sm">24 ORE SU 24</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Contact -->
+        <div class="bg-brand-navy p-12 rounded-[60px] shadow-2xl reveal delay-200 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-cyan/10 rounded-full blur-3xl"></div>
+          <h3 class="text-3xl font-black text-white mb-10">Send una Richiesta</h3>
+          <form id="contact-form" class="space-y-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-white/60 text-xs font-black uppercase tracking-widest mb-3 ml-2">Name Completo</label>
+                <input type="text" required placeholder="Mario Rossi" class="form-input w-full bg-white/5 border border-white/10 text-white px-6 py-5 rounded-2xl" />
+              </div>
+              <div>
+                <label class="block text-white/60 text-xs font-black uppercase tracking-widest mb-3 ml-2">Phone</label>
+                <input type="tel" required placeholder="+39 333 000 0000" class="form-input w-full bg-white/5 border border-white/10 text-white px-6 py-5 rounded-2xl" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-white/60 text-xs font-black uppercase tracking-widest mb-3 ml-2">Email</label>
+              <input type="email" required placeholder="mario@email.it" class="form-input w-full bg-white/5 border border-white/10 text-white px-6 py-5 rounded-2xl" />
+            </div>
+            <div>
+              <label class="block text-white/60 text-xs font-black uppercase tracking-widest mb-3 ml-2">Tipo di Intervento</label>
+              <select class="form-input w-full bg-white/5 border border-white/10 text-white px-6 py-5 rounded-2xl appearance-none">
+                <option class="bg-brand-navy">Emergenza / Perdita</option>
+                <option class="bg-brand-navy">Caldaia / Clima</option>
+                <option class="bg-brand-navy">Nuovo Impianto</option>
+                <option class="bg-brand-navy">Altro</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-white/60 text-xs font-black uppercase tracking-widest mb-3 ml-2">Message</label>
+              <textarea rows="4" required placeholder="Descrivi brevemente il problema..." class="form-input w-full bg-white/5 border border-white/10 text-white px-6 py-5 rounded-2xl"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-cyan hover:bg-brand-accent text-brand-navy py-6 rounded-2xl font-black text-xl transition-all shadow-glow hover:shadow-glow-lg">
+              Send Message
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-8 p-6 bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan rounded-3xl text-center font-black text-lg">
+            Message inviato! Ti richiamiamo subito. 💧
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="bg-brand-dark text-white py-24 relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-full h-64 bg-liquid-wave opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid md:grid-cols-4 gap-16 mb-20">
+        
+        <!-- Brand -->
+        <div class="col-span-1 md:col-span-2">
+          <a href="#" class="flex items-center gap-4 mb-8">
+            <div class="w-12 h-12 bg-brand-cyan rounded-2xl flex items-center justify-center">
+              <i class="fas fa-water text-brand-navy text-2xl"></i>
+            </div>
+            <span class="font-black text-3xl tracking-tight">Plumbing<span class="text-brand-cyan">Pro</span></span>
+          </a>
+          <p class="text-white/40 max-w-md leading-relaxed text-lg">
+            Leader nel settore plumber a Milan. Tecnologia, rapidità e trasparenza al servizio della tua casa e della tua azienda.
+          </p>
+          <div class="flex gap-5 mt-10">
+            <a href="#" class="w-12 h-12 bg-white/5 hover:bg-brand-cyan hover:text-brand-navy rounded-2xl flex items-center justify-center transition-all duration-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-12 h-12 bg-white/5 hover:bg-brand-cyan hover:text-brand-navy rounded-2xl flex items-center justify-center transition-all duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-12 h-12 bg-white/5 hover:bg-brand-cyan hover:text-brand-navy rounded-2xl flex items-center justify-center transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="font-black text-xl mb-8">Navigation</h4>
+          <ul class="space-y-5 text-white/40 font-bold">
+            <li><a href="#home" class="hover:text-brand-cyan transition-colors">Home</a></li>
+            <li><a href="#perche-noi" class="hover:text-brand-cyan transition-colors">Perché Noi</a></li>
+            <li><a href="#servizi" class="hover:text-brand-cyan transition-colors">Servizi</a></li>
+            <li><a href="#contatti" class="hover:text-brand-cyan transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="font-black text-xl mb-8">Legal Notes</h4>
+          <ul class="space-y-5 text-white/40 font-bold">
+            <li><a href="#" class="hover:text-brand-cyan transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-brand-cyan transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="hover:text-brand-cyan transition-colors">Termini di Servizio</a></li>
+            <!-- MODIFICA: Inserisci la tua P.IVA -->
+            <li>VAT: 00000000000</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-white/20 text-sm font-bold">
+        <p>&copy; 2026 PlumberPro Milan. Tutti i diritti riservati.</p>
+        <p>Design Premium by Manus AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+    import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+    import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+    import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+    // 1. Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled', 'py-2');
+        nav.classList.remove('py-4');
+        nav.style.background = 'rgba(15, 23, 42, 0.95)';
+      } else {
+        nav.classList.remove('scrolled', 'py-2');
+        nav.classList.add('py-4');
+        nav.style.background = 'transparent';
+      }
+    });
+
+    // 2. Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+
+    // 3. Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // 4. Contact Form Success Simulation
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.classList.add('opacity-50', 'pointer-events-none');
+      setTimeout(() => {
+        form.reset();
+        form.classList.add('hidden');
+        successMsg.classList.remove('hidden');
+      }, 1500);
+    });
+
+    // 5. Rain Effect Integration
+    (() => {
+      const container = document.getElementById('rain-container');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+      camera.position.z = 1;
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      // Background scene - Deep navy night sky
+      const bgScene = new THREE.Scene();
+      const bgCamera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+      bgCamera.position.z = 1;
+
+      const bgRT = new THREE.WebGLRenderTarget(container.clientWidth, container.clientHeight, {
+        minFilter: THREE.LinearFilter,
+        magFilter: THREE.LinearFilter
+      });
+
+      const bgMaterial = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) }
+        },
+        vertexShader: `
+          varying vec2 vUv;
+          void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+          }
+        `,
+        fragmentShader: `
+          uniform float uTime;
+          uniform vec2 uResolution;
+          varying vec2 vUv;
+
+          float hash(vec2 p) {
+            return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+          }
+
+          void main() {
+            vec2 uv = vUv;
+            float aspect = uResolution.x / uResolution.y;
+
+            // Deep navy/teal night sky gradient
+            vec3 col = mix(vec3(0.01, 0.02, 0.05), vec3(0.02, 0.05, 0.1), uv.y);
+
+            // Subtle city bokeh lights - cool blue and cyan
+            for(int i = 0; i < 25; i++) {
+              float fi = float(i);
+              vec2 pos = vec2(
+                hash(vec2(fi, 0.0)),
+                hash(vec2(0.0, fi)) * 0.7 + 0.1
+              );
+              pos.x += sin(uTime * 0.1 + fi) * 0.005;
+
+              float size = hash(vec2(fi, fi)) * 0.04 + 0.01;
+              float d = length((uv - pos) * vec2(aspect, 1.0));
+              float bokeh = smoothstep(size, size * 0.1, d);
+
+              float pulse = 0.6 + 0.4 * sin(uTime * (0.2 + hash(vec2(fi, 3.0)) * 0.4) + fi);
+              bokeh *= pulse;
+
+              vec3 lightCol;
+              float colorChoice = hash(vec2(fi, 7.0));
+              if(colorChoice < 0.6) {
+                lightCol = vec3(0.0, 0.85, 1.0); // electric cyan
+              } else if(colorChoice < 0.8) {
+                lightCol = vec3(0.0, 0.4, 0.8); // ocean blue
+              } else {
+                lightCol = vec3(1.0, 0.4, 0.2); // orange accent
+              }
+
+              col += lightCol * bokeh * 0.3;
+            }
+
+            gl_FragColor = vec4(col, 1.0);
+          }
+        `
+      });
+
+      const bgQuad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), bgMaterial);
+      bgScene.add(bgQuad);
+
+      // Main water shader
+      const waterMaterial = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uResolution: { value: new THREE.Vector2(container.clientWidth, container.clientHeight) },
+          uBackground: { value: bgRT.texture }
+        },
+        vertexShader: `
+          varying vec2 vUv;
+          void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+          }
+        `,
+        fragmentShader: `
+          precision highp float;
+          uniform float uTime;
+          uniform vec2 uResolution;
+          uniform sampler2D uBackground;
+          varying vec2 vUv;
+
+          float hash(float n) { return fract(sin(n) * 43758.5453); }
+          float hash2(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+
+          float drop(vec2 uv, float t, float id) {
+            float speed = 0.2 + hash(id) * 0.3;
+            float startX = hash(id * 1.73) * 0.9 + 0.05;
+            float startTime = hash(id * 3.91) * 10.0;
+            float y = 1.2 - mod((t + startTime) * speed, 1.6);
+            float x = startX + sin(y * 10.0 + id) * 0.01;
+            vec2 dropPos = vec2(x, y);
+            float aspect = uResolution.x / uResolution.y;
+            vec2 diff = (uv - dropPos) * vec2(aspect, 1.0);
+            diff.y *= 0.6;
+            float d = length(diff);
+            float size = 0.006 + hash(id * 2.17) * 0.01;
+            float drop = smoothstep(size, size * 0.1, d);
+            
+            float trail = 0.0;
+            if(uv.y > y && uv.y < y + 0.2) {
+              float trailX = x + sin(uv.y * 10.0 + id) * 0.01;
+              float trailDist = abs(uv.x - trailX) * aspect;
+              trail = smoothstep(0.002, 0.0, trailDist) * smoothstep(y + 0.25, y, uv.y);
+            }
+            return max(drop, trail * 0.4);
+          }
+
+          void main() {
+            vec2 uv = vUv;
+            float t = uTime;
+            float water = 0.0;
+            for(int i = 0; i < 40; i++) {
+              water += drop(uv, t, float(i));
+            }
+            
+            float eps = 1.0 / uResolution.x;
+            float wL = 0.0, wR = 0.0, wU = 0.0, wD = 0.0;
+            for(int i = 0; i < 15; i++) {
+              wL += drop(uv + vec2(-eps, 0.0), t, float(i));
+              wR += drop(uv + vec2(eps, 0.0), t, float(i));
+              wU += drop(uv + vec2(0.0, eps), t, float(i));
+              wD += drop(uv + vec2(0.0, -eps), t, float(i));
+            }
+            vec2 waterNormal = vec2(wL - wR, wD - wU) * 10.0;
+            
+            vec2 refUv = uv + waterNormal * 0.05;
+            vec3 bg = texture2D(uBackground, refUv).rgb;
+            
+            // Highlights
+            float highlight = max(0.0, waterNormal.x + waterNormal.y) * 0.2;
+            bg += highlight * vec3(0.5, 0.9, 1.0);
+            
+            gl_FragColor = vec4(bg, 1.0);
+          }
+        `
+      });
+
+      const waterQuad = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), waterMaterial);
+      scene.add(waterQuad);
+
+      function animate(time) {
+        const t = time * 0.001;
+        bgMaterial.uniforms.uTime.value = t;
+        waterMaterial.uniforms.uTime.value = t;
+
+        renderer.setRenderTarget(bgRT);
+        renderer.render(bgScene, bgCamera);
+        renderer.setRenderTarget(null);
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+
+      window.addEventListener('resize', () => {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        renderer.setSize(w, h);
+        bgRT.setSize(w, h);
+        bgMaterial.uniforms.uResolution.value.set(w, h);
+        waterMaterial.uniforms.uResolution.value.set(w, h);
+      });
+    })();
+
+    // ============================================================
+    // SECURITY PROTECTIONS
+    // ============================================================
+    
+    function sanitizeInput(input) {
+      const div = document.createElement('div');
+      div.textContent = input;
+      return div.innerHTML;
+    }
+
+    const formInputs = document.querySelectorAll('.form-input');
+    formInputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        this.value = sanitizeInput(this.value);
+      });
+      input.addEventListener('keypress', function(e) {
+        if (e.key === '<' || e.key === '>' || e.key === '{' || e.key === '}') {
+          e.preventDefault();
+        }
+      });
+    });
+
+    let lastSubmitTime = 0;
+    const SUBMIT_COOLDOWN = 3000;
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        const now = Date.now();
+        if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+          e.preventDefault();
+          console.warn('Form submission rate limited');
+          return false;
+        }
+        lastSubmitTime = now;
+      });
+    }
+
+    if (window.self !== window.top) {
+      window.top.location = window.self.location;
+    }
+
+    window.addEventListener('error', function(e) {
+      console.error('Error detected:', e.type);
+    });
+
+    const originalFetch = window.fetch;
+    window.fetch = function(...args) {
+      const url = args[0];
+      if (typeof url === 'string' && !url.startsWith('http://localhost') && !url.startsWith(window.location.origin)) {
+        if (!url.startsWith('https://')) {
+          console.warn('Insecure fetch blocked:', url);
+          return Promise.reject(new Error('Insecure request blocked'));
+        }
+      }
+      return originalFetch.apply(this, args);
+    };
+
+    window.eval = function() {
+      throw new Error('eval() is disabled for security reasons');
+    };
+
+    console.log('🔒 Security protections activated');
+  </script>
+</body>
+</html>
